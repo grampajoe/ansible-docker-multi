@@ -1,0 +1,11 @@
+# Gemfile, Ansiblefile, etc. etc. etc.
+*file.lock
+
+# Kitchen
+.kitchen
+
+# Librarian
+.librarian
+
+# Vagrant
+.vagrant

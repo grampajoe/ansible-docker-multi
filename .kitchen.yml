@@ -1,0 +1,19 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: ansible_playbook
+  hosts: all
+  playbook: 'tests/integration/default.yml'
+
+platforms:
+  - name: ubuntu-14.04
+    driver_config:
+      box: ubuntu/trusty64
+  - name: centos-6.5
+    driver_config:
+      box: chef/centos-6.5
+
+suites:
+  - name: default
