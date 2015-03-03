@@ -13,4 +13,4 @@ build:
 
     - script:
         name: Kitchen tests
-        code: kitchen test -c
+        code: bundle exec kitchen test -c
