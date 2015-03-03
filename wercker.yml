@@ -5,5 +5,5 @@ build:
     - wercker/bundle-install@1.1.1
 
     - script:
-      name: Kitchen tests
-      code: kitchen test -c
+        name: Kitchen tests
+        code: kitchen test -c
