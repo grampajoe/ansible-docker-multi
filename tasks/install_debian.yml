@@ -1,0 +1,6 @@
+---
+- name: Install the Docker package
+  apt: name=docker.io
+
+- name: Run the Docker daemon
+  service: name=docker.io state=running enabled=yes

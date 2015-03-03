@@ -1,16 +1,14 @@
-box: wercker-labs/docker
+box: wercker/pyton
 
 build:
   steps:
-    - install-packages:
-        packages: ruby2.0
+    - wercker/pip-install@0.0.6:
+        packages_list: "ansible>=1.2"
 
     - script:
-        name: Install Bundler
-        code: sudo gem install bundler
-
-    - wercker/bundle-install@1.1.1
-
+        name: Generate an inventory file
+        code: echo localhost > inventory
+        
     - script:
-        name: Kitchen tests
-        code: bundle exec kitchen test -c
+        name: Check Ansible syntax
+        code: ansible-playbook -i inventory --syntax-check test.yml
