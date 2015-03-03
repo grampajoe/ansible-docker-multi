@@ -1,0 +1,9 @@
+box: wercker/docker
+
+build:
+  steps:
+    - wercker/bundle-install@1.1.1
+
+    - script:
+      name: Kitchen tests
+      code: kitchen test $KITCHEN_PLATFORM
