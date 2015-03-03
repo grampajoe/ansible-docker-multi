@@ -1,6 +1,6 @@
 ---
 driver:
-  name: vagrant
+  name: docker
 
 provisioner:
   name: ansible_playbook
@@ -9,11 +9,7 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
-    driver_config:
-      box: ubuntu/trusty64
   - name: centos-6.5
-    driver_config:
-      box: chef/centos-6.5
 
 suites:
   - name: default
