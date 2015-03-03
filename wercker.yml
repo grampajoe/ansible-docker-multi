@@ -6,4 +6,4 @@ build:
 
     - script:
       name: Kitchen tests
-      code: kitchen test $KITCHEN_PLATFORM
+      code: kitchen test -c
