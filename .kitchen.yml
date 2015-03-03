@@ -5,7 +5,6 @@ driver:
 provisioner:
   name: ansible_playbook
   hosts: all
-  playbook: 'tests/integration/default.yml'
 
 platforms:
   - name: ubuntu-14.04
